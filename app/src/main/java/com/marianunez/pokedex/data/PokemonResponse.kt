@@ -1,5 +1,6 @@
 package com.marianunez.pokedex.data
 
+// https://pokeapi.co/
 
 data class ApiResponse (
     var count: Int,
@@ -10,6 +11,7 @@ data class ApiResponse (
 
 data class PokemonResults(
     var name: String,
-    var url: String
+    var url: String,
+    var id: String
 )
 

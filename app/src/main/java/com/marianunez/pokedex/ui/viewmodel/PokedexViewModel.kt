@@ -23,12 +23,21 @@ class PokedexViewModel() : ViewModel() {
 
         CoroutineScope(Dispatchers.IO).launch {
 
-            val call = PokemonApi.retrofitService.getPokemon(100, 200)
+            val call = PokemonApi.retrofitService.getPokemon(100, 0)
             call.enqueue(object : Callback<ApiResponse> {
                 override fun onResponse(call: Call<ApiResponse>, response: Response<ApiResponse>) {
+
                     // accedemos a results de nuestra data class ApiResponse
                     response.body()?.results.let { list ->
+
+                        //recorremos la lista para sacar el id
+                        list?.map {
+                            it.name = it.name.capitalize()
+                            it.id = it.url.removeSuffix("/").split("/").last()
+                            }
+
                         pokemonList.postValue(list)
+                        println(list)
                     }
                 }
 
