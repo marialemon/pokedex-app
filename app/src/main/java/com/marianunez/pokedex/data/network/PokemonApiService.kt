@@ -1,17 +1,15 @@
 package com.marianunez.pokedex.data.network
 
-import com.marianunez.pokedex.data.Pokemon
+import com.marianunez.pokedex.data.ApiResponse
 import retrofit2.Call
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-
+import retrofit2.http.Query
 
 
 interface PokemonApiService {
-    @GET("pokemon?limit=100&offset=200")
-
-    fun getPokemon(): Call<Pokemon>
+  //@GET("pokemon?limit=100&offset=200")
+    @GET("pokemon")
+    fun getPokemon(@Query("limit") limit:Int, @Query("offset") offset:Int): Call<ApiResponse>
 }
 
 

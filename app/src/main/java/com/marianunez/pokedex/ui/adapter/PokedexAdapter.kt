@@ -4,9 +4,16 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.marianunez.pokedex.R
-import com.marianunez.pokedex.ui.model.Pokemon
+import com.marianunez.pokedex.data.PokemonResults
 
-class PokedexAdapter(val pokemon:List<Pokemon>) : RecyclerView.Adapter<PokedexViewHolder>(){
+class PokedexAdapter() : RecyclerView.Adapter<PokedexViewHolder>(){
+
+    private var pokemonList: List<PokemonResults> = emptyList()
+    fun setData(list: List<PokemonResults>){
+        pokemonList = list
+        notifyDataSetChanged()
+    }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokedexViewHolder {
         val adapterLayout =
@@ -15,10 +22,10 @@ class PokedexAdapter(val pokemon:List<Pokemon>) : RecyclerView.Adapter<PokedexVi
     }
 
     override fun onBindViewHolder(holder: PokedexViewHolder, position: Int) {
-        holder.bind(pokemon[position])
+        holder.bind(pokemonList[position])
     }
 
-    override fun getItemCount(): Int = pokemon.size
+    override fun getItemCount(): Int = pokemonList.size
 
 
 }
