@@ -1,7 +1,7 @@
 package com.marianunez.pokedex.data
 
 
-data class Pokemon (
+data class ApiResponse (
     var count: Int,
     var next: String,
     var previous: String,
