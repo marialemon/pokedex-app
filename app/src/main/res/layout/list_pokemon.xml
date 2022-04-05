@@ -6,9 +6,9 @@
     android:id="@+id/itemCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginVertical="8dp"
-    app:cardBackgroundColor="@color/yellow_orange"
-    app:cardCornerRadius="16dp"
+    android:layout_marginVertical="6dp"
+    app:cardBackgroundColor="@color/emerald"
+    app:cardCornerRadius="18dp"
     app:cardElevation="@dimen/cardview_default_elevation">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,21 +17,28 @@
 
         <ImageView
             android:id="@+id/itemImage"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:background="@color/black"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="16dp"
             android:contentDescription="@string/pokemon_image"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
+            android:padding="12dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/itemImage"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/itemId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white_gray"
+                android:textStyle="bold"
+                tools:text="#001" />
 
             <TextView
                 android:id="@+id/itemTitle"
@@ -42,26 +49,9 @@
                 android:textStyle="bold"
                 tools:text="Pokemon Name" />
 
-            <TextView
-                android:id="@+id/itemSubtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="Subtitle" />
-
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/itemId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="6dp"
-            android:textColor="@color/white_gray"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            android:translationY="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="#001" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

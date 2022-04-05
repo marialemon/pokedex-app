@@ -15,7 +15,7 @@
         android:paddingVertical="8dp"
         android:text="@string/app_name"
         android:textColor="@color/red"
-        android:textSize="28sp"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,8 +1,8 @@
-package com.marianunez.pokedex.data
+package com.marianunez.pokedex.data.network.response
 
 // https://pokeapi.co/
 
-data class ApiResponse (
+data class ApiResponse(
     var count: Int,
     var next: String,
     var previous: String,
@@ -15,3 +15,8 @@ data class PokemonResults(
     var id: String
 )
 
+data class PokemonDetail(
+    val name: String,
+    val id: Int,
+    val weight: String
+)

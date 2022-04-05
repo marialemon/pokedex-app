@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.marianunez.pokedex.R
-import com.marianunez.pokedex.data.PokemonResults
+import com.marianunez.pokedex.data.network.response.PokemonResults
 
 class PokedexAdapter() : RecyclerView.Adapter<PokedexViewHolder>(){
 

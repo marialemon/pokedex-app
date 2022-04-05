@@ -2,8 +2,8 @@ package com.marianunez.pokedex.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.marianunez.pokedex.data.ApiResponse
-import com.marianunez.pokedex.data.PokemonResults
+import com.marianunez.pokedex.data.network.response.ApiResponse
+import com.marianunez.pokedex.data.network.response.PokemonResults
 import com.marianunez.pokedex.data.network.PokemonApi
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

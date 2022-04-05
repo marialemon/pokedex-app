@@ -3,15 +3,16 @@ package com.marianunez.pokedex.ui.adapter
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.marianunez.pokedex.commons.loadImageByUrl
-import com.marianunez.pokedex.data.PokemonResults
+import com.marianunez.pokedex.data.network.response.PokemonResults
 import com.marianunez.pokedex.databinding.ListPokemonBinding
-import com.marianunez.pokedex.ui.viewmodel.PokedexViewModel
 
 class PokedexViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
     private val binding = ListPokemonBinding.bind(view)
 
-    private val img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+    private val imgRetro = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+    private val img3D = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/"
+    private val img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
 
     fun bind(item: PokemonResults){
         binding.apply {
